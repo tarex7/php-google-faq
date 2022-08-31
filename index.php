@@ -134,6 +134,10 @@ $footerMenu = [
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <style>
+main {
+    margin-top: 150px;
+}
+        
         ul {
             list-style-type: none;
         }
@@ -142,11 +146,21 @@ $footerMenu = [
             background-color: #f5f5f5;
         }
 
+        header {
+            position: fixed;
+            background-color: #fff;
+            left: 0;
+            right: 0;
+            height: 110px;
+        }
+
         header a {
             text-decoration: none;
             font-weight: 500;
             color: #444;
             border-bottom: 2px solid transparent;
+            
+            
         }
 
         footer a {
@@ -206,6 +220,7 @@ $footerMenu = [
 
             <div class="col">
 
+                <main>
                 <ul>
                     <?php foreach ($FAQ as $question) : ?>
 
@@ -218,6 +233,7 @@ $footerMenu = [
 
                     <?php endforeach ?>
                 </ul>
+                </main>
 
             </div>
 
