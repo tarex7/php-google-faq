@@ -104,14 +104,20 @@ $FAQ = [
 ];
 
 $menu = [
-        "Introduzione" => "https://policies.google.com/",
-        "Norme sulla privacy" => "https://policies.google.com/privacy",
-        "Termini di servizio" => "https://policies.google.com/terms",
-        "Tecnologie" => "https://policies.google.com/tecnologies",
-        "Domande frequenti" => "https://policies.google.com/faq"
-        ];
 
+    "Introduzione" => "https://policies.google.com/",
+    "Norme sulla privacy" => "https://policies.google.com/privacy",
+    "Termini di servizio" => "https://policies.google.com/terms",
+    "Tecnologie" => "https://policies.google.com/tecnologies",
+    "Domande frequenti" => "https://policies.google.com/faq"
+];
 
+$footerMenu = [
+    "Google" => "https://www.google.com/",
+    "Tutto su Google" => "https://about.google/",
+    "Privacy" => "https://policies.google.com/privacy",
+    "Termini" => "https://policies.google.com/terms",
+]
 
 
 ?>
@@ -183,7 +189,7 @@ $menu = [
                     <div class="col">
                         <nav class="px-2">
 
-                            <?php foreach($menu as $menu_item => $href ) : ?>
+                            <?php foreach ($menu as $menu_item => $href) : ?>
                                 <a class="mx-2" href="<?= $href ?>"><?= $menu_item ?></a>
                             <?php endforeach ?>
                         </nav>
@@ -222,11 +228,10 @@ $menu = [
     <footer class="p-2">
         <div class="container d-flex justify-content-between align-items-center ">
             <ul class="d-flex px-3 mt-2">
-                <li><a class="text-muted ms-3" href="https://www.google.com/">Google</a></li>
-                <li><a class="text-muted ms-3" href="https://www.google.com/">Tutto su Google</a></li>
-                <li><a class="text-muted ms-3" href="https://www.google.com/">Privacy</a></li>
-                <li><a class="text-muted ms-3" href="https://www.google.com/">Termini</a></li>
 
+            <?php foreach($footerMenu as $menuItem => $href) :?>
+                <li><a class="text-muted ms-3" href="<?= $href ?>"><?= $menuItem ?></a></li>
+               <?php endforeach ?> 
             </ul>
             <select name="select" id="select" class="w-25">
                 <option>Italiano</option>
