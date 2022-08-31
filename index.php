@@ -103,6 +103,16 @@ $FAQ = [
 
 ];
 
+$menu = [
+        "Introduzione" => "https://policies.google.com/",
+        "Norme sulla privacy" => "https://policies.google.com/privacy",
+        "Termini di servizio" => "https://policies.google.com/terms",
+        "Tecnologie" => "https://policies.google.com/tecnologies",
+        "Domande frequenti" => "https://policies.google.com/faq"
+        ];
+
+
+
 
 ?>
 
@@ -172,12 +182,12 @@ $FAQ = [
                 <div>
                     <div class="col">
                         <nav class="px-2">
-                            <a class="mx-2" href="https://policies.google.com/">Introduzione</a>
-                            <a class="mx-2" href="https://policies.google.com/privacy">Norme sulla privacy</a>
-                            <a class="mx-2" href="https://policies.google.com/terms">Termini di servizio</a>
-                            <a class="mx-2" href="https://policies.google.com/technologies">Tecnologie</a>
-                            <a class="mx-2 active" href="https://policies.google.com/faq">Domande frequenti</a>
+
+                            <?php foreach($menu as $menu_item => $href ) : ?>
+                                <a class="mx-2" href="<?= $href ?>"><?= $menu_item ?></a>
+                            <?php endforeach ?>
                         </nav>
+
                         <hr>
                     </div>
                 </div>
